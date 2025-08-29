@@ -47,6 +47,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: black;
+}
+
 header h1 {
     color: white;
     font-weight: bold;
@@ -61,29 +65,32 @@ button {
     font-weight: bold;
 }
 
-main li {
-    border-radius: 100px;
-    padding: 50px 45px;
-    background-color: black;
-    color: white;
+button:hover {
+    background-color: white;
+    color: black;
 }
 
-.content {
+
+.conteneur {
     display: flex;
     flex-direction: row;
     width: 100vw;
     justify-content: space-evenly;
 }
 
-.sub-content div {
+.sous-conteneur div {
     display: flex;
     flex-direction: row;
     gap: 25px;
 }
 
-.sub-content img {
+.sous-conteneur img {
     width: 25px;
     height: 25px;
+}
+
+.social-network-icon:hover {
+    transform: scale(1.5);
 }
 
 .copyright-div {
@@ -95,12 +102,13 @@ main li {
 }
 
 @media screen and (width < 800px) {
-    ul{
+    ul {
         width: 100vw;
+        margin-right: 0;
     }
-}
-@media screen and (width < 400px) {
-    .content{
-        flex-direction: column;
+
+    @media screen and (width < 400px) {
+        .conteneur {
+            flex-direction: column;
+        }
     }
-}
